@@ -1,0 +1,61 @@
+{
+	"info": {
+		"_postman_id": "d6e27aab-6151-41b1-afef-08086242adb0",
+		"name": "Reading Request",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "47185198"
+	},
+	"item": [
+		{
+			"name": "/users?userID=999",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/users?userID=999&password=1234",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"users"
+					],
+					"query": [
+						{
+							"key": "userID",
+							"value": "999"
+						},
+						{
+							"key": "password",
+							"value": "1234"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/users/:userId/:name/:password",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/users/7707/aki/1234",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"users",
+						"7707",
+						"aki",
+						"1234"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
