@@ -1,0 +1,54 @@
+const express = require('express')
+
+const ConnectDB = require("../src/config/database")
+
+const User = require('./model/User')
+
+const app = express()
+
+const {validateSignUpData} = require('../utils/validation') 
+
+const cookieParser = require("cookie-parser")
+
+const authRouter = require("./routes/auth")
+
+const profileRouter = require("./routes/profile")
+
+const requestRouter = require("./routes/request")
+
+const userRouter = require("./routes/user")
+
+const cors = require('cors')
+
+app.use(cors({
+    origin : "http://localhost:5173",
+    credentials : true,
+    // ✅ ADD THIS LINE to allow specific methods
+    methods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE', 'OPTIONS'], 
+}))
+
+app.use(express.json()) 
+
+app.use(cookieParser())
+
+const PORT = 3000;
+
+app.use("/auth", authRouter)
+
+app.use("/profile", profileRouter)
+
+app.use("/request", requestRouter)
+
+app.use("/user", userRouter)
+
+
+ConnectDB()
+    .then(() => {
+        console.log("DB Connection Successful")
+        app.listen(PORT, () => {
+            console.log("Server is Listening on :" , PORT)
+        })
+    })
+    .catch(()=>{
+        console.error("DB Connection Failed!!")
+    })
