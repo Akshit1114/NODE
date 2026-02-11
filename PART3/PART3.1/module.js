@@ -12,10 +12,19 @@ function () {
 so outside we cant do 
 console.log(a) -> will get not defined
 
-This same concept happens when we do a module require, so IIFE wraps the function inside it and now function's variables or inner function can't be accessed outside
+This same concept happens when we do a module require, so IIFE wraps the function inside it and now function's variables or 
+inner function can't be accessed outside
 
 */
 
+// (function () {
+//     const a = 10;
+//     console.log(a);
+//     function b() {
+//         console.log(b);
+//     }
+//     b()
+// })();
 
 
 function  Node() {

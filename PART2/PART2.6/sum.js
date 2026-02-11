@@ -14,18 +14,18 @@
 
 // non strict mode -------------------- (in commonjs module)
 
-console.log("Execute Sum Module")
+// console.log("Execute Sum Module")
 
-z = 100  // not necessary to write var,let,const in non strict mode
+// z = 100  // not necessary to write var,let,const in non strict mode
 
- function calculateSum(a,b) {
-    const sum = a + b;
-    console.log(sum)
-}
+//  function calculateSum(a,b) {
+//     const sum = a + b;
+//     console.log(sum)
+// }
 
- const x = 99
+//  const x = 99
 
- module.exports = {
-    calculateSum,
-    x
- }
+//  module.exports = {
+//     calculateSum,
+//     x
+//  }

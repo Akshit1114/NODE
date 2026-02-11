@@ -5,5 +5,5 @@ const {x , calculateSum, calculateMultiplication } =  require("./calculate")
 var a = 10
 var b = 12
 console.log(x)
-calculateSum(a,b)
-calculateMultiplication(a,b)
+// calculateSum(a,b)
+// calculateMultiplication(a,b)

@@ -21,12 +21,14 @@ This same concept happens when we do a module require, so IIFE wraps the functio
 function  Node() {
     console.log("Node js")
 }
-console.log("Hello")
 
-// console.log(exports)
-// console.log(require)
-// console.log(module)
-// console.log(__filename)
-// console.log(__dirname)
+
+console.log("Hello")
+// exports.x = 10
+console.log(exports)
+console.log({require})
+console.log({module})
+console.log({__filename})
+console.log({__dirname})
 
 module.exports = Node;
