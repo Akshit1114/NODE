@@ -24,7 +24,6 @@ function  Node() {
 
 
 console.log("Hello")
-// exports.x = 10
 console.log(exports)
 console.log({require})
 console.log({module})

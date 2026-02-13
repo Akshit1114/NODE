@@ -9,7 +9,7 @@ var a = 1393232     // this code execute in sync way/fashion
 var b = 9532583       // this code execute in sync way/fashion 
   
 // this code execute in sync way/fashion but it takes time and this is gonna block the main thread, will take time until rest of the code has too wait
-fs.readFileSync("./file.txt", "utf-8")
+fs.readFileSync("./file.txt", "utf-8")  // (help : PART4/PART4.2/file.txt)
 console.log("Above code blocks the main thread")
 
 
@@ -39,7 +39,6 @@ That’s why your process hangs until Node decides the socket has timed out or b
 //     });
 // });
 
-
 // Time out
 
 setTimeout(() => {        // this code execute in async way/fashion , doesn't block main thread
@@ -63,6 +62,5 @@ function multiply(a,b) {          // this code execute in sync way/fashion
 var c = multiply(a,b)          // this code execute in sync way/fashion 
 
 console.log("Answer : ", c)        // this code execute in sync way/fashion 
-
 
 // can check blocking.js file for more clear understanding of blocking mean thread

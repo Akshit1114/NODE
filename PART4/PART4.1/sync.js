@@ -14,4 +14,4 @@ var c = multiply(a,b)
 
 console.log("Answer : ", c)
 
-// Super fast proving : Time Tide and JS waits for none
+// Super fast proving : Time, Tide and JS waits for none
